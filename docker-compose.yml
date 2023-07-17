@@ -9,6 +9,11 @@ services:
       MYSQL_PASSWORD: wpuserpassword
     volumes:
       - dbdata:/var/lib/mysql
+
+  adminer:
+     image: adminer
+     ports:
+       - 8081:8080
   wordpress:
     image: wordpress:latest
     depends_on:
